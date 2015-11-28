@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'android-crypter'
+
+    publishedGroupId = 'com.sbakdemir.androidcrypter'
+    libraryName = 'AndroidCrypter'
+    artifact = 'android-crypter'
+
+    libraryDescription = 'An xOr encrypt&decrypt library.'
+
+    siteUrl = 'https://github.com/selim1377/androidcrypter'
+    gitUrl = 'https://github.com/selim1377/androidcrypter.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'selim-bakdemir'
+    developerName = 'Selim Bakdemir'
+    developerEmail = 'selim.bakdemir@gmail.com'
+
+    licenseName = 'MIT License'
+    licenseUrl = 'http://opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -23,3 +47,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
